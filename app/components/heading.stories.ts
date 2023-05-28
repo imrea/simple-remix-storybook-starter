@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Link } from './link';
+import { Heading } from './heading';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'Example/Link',
-  component: Link,
-  tags: ['autodocs'],
-} satisfies Meta<typeof Link>;
+  title: 'Components/Heading',
+  component: Heading,
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -14,6 +13,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
-    children: 'Test Link',
+    level: 1,
+    children: 'Test Heading',
   },
 };

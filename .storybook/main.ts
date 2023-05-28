@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
 const config: StorybookConfig = {
   stories: [
     // '../stories/**/*.mdx',
@@ -16,6 +18,12 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  async viteFinal(config) {
+    return {
+      ...config,
+      plugins: [...[config.plugins], tsconfigPaths()],
+    };
   },
 };
 export default config;
