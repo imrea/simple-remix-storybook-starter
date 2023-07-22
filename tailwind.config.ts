@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Nunito"', ...defaults.fontFamily.sans],
+        sans: ['"Geologica"', ...defaults.fontFamily.sans],
         mono: ['"Ubuntu Mono"', ...defaults.fontFamily.mono],
       },
     },
